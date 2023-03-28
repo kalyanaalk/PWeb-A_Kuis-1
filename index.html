@@ -1,303 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">	
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMI TODAY</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="js/categories.js"></script>
-    </head>
-<body>
+</head>
+<body style="background-color: #f5ebeb;">
 
-    <header>
-        <nav class="navbar navbar-expand-lg px-5 border-bottom fixed-top" style="font-family: 'Raleway', sans-serif; background-color: #d2d2d2;">
-            <a class="navbar-brand" href="#">TMI TODAY</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">TMI TODAY</a>
+        </div>
+        <div class="main_list" id="mainListDiv">
+            <ul>
+                <li><a href="#">What's Hot</a></li>
+                <li><a href="">Latest</a></li>
+                <li>  
+                  <a href="#">
+                    <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn">Categories</button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="">Lifestyle</a>
+                        <a href="">Techology</a>
+                        <a href="">Science</a>
+                        <a href="">Others...</a>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li><a href="">Subscribe</a></li>
+            </ul>
+        </div>
+        <!-- <div class="media_button">
+            <button class="main_media_button" id="mediaButton">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse px-5" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto fs-6">
-                    <li><div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Categories</button>
-                        <div id="myDropdown" class="dropdown-content">
-                          <a href="">Sport</a>
-                          <a href="">Lifestyle</a>
-                          <a href="">Music</a>
-                          <a href="">Politics</a>
-                          <a href="">Others...</a>
-                        </div>
-                      </div></li>
-                    <li><a class="nav-link text-black" aria-current="page" href="#container text-center">Hot Topics</a></li>
-                    <li><a class="nav-link text-black" aria-current="page" href="#Top">Top Stories</a></li>
-                    <li><a class="nav-link text-black" aria-current="page" href="#Latest">Latest Stories</a></li>
-                    <li><a class="nav-link text-black" aria-current="page" href="#Contact">Contact</a></li>
-                    <!-- <li><a href="#"><img src="images/search.png" alt="search" style="width:20px;height:20px;"></a></li> -->
-                    <li><div class="input-group rounded">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                          <i class="fas fa-search"></i>
-                        </span>
-                      </div></li>
-                </div>
-            </div>
-        </nav>
-        <!-- <div class = "navigation-container">
-            <div class = "top-head">
-                <h2>TMI TODAY</h2>
-            </div>
-
-            <div class = "nav-bar" id = "nav-bar">
-                <nav>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#Banner">hot topics</a></li>
-                        <li><a href="#Top">top stories</a></li>
-                        <li><a href="#Latest">latest stories</a></li>
-                        <li><a href="#Contact">contact</a></li>
-                        <li><a href="#"><img src="images/search.png" alt="search" style="width:20px;height:20px;"></a></li>
-                    </ul>
-                </nav>
-            </div>
         </div> -->
-    </header>
+    </div>
+  </nav>
+  
 
-    <!-- <section class = "banner" id="Banner">
-        <div class = "banner-main-content">
-            <h2>Get today's Too<br>Much Information<br>From Kos PakDar</h2>
+<div class="container" style="padding: 130px 60px 40px 60px;">
+  <div class="row align-items-start">
+    <div class="col" style="padding: 0 0 40px 0;">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="images/hot1.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Makin Canggih, Deteksi Penyakit Lewat Visual CT Scan 512 Cukup 0,3 Detik</h5>
+          <p class="card-text">Belum lama ini, Presiden Joko Widodo mempermasalahkan banyaknya pasien yang berobat ke luar negeri. Di mana hal ini mengakibatkan Indonesia...</p>
         </div>
-
-        <div class = "banner-sub-content">
-            <div class = "hot-topic">
-                
-
-                <div class = "hot-topic-content">
-                    <img src = "images/hot-topic-1.jpeg" alt = "" style="width:300x;height:161px;">
-                    <h2>Stress AJK, Tiga Remaja Bonding Sampai Tengah Malam</h2>
-                    <p>Setelah membahas penugasan 3 AJK lewat discord (27/2/23), tiga remaja ini diduga stress dan menumpahkan kestressan mereka dengan cara bonding dan deep talk via zoom...</p>
-                    <button>
-                        <a href = "#">Read More</a>
-                    </button>
-                </div>
-            </div>
-
-            <div class = "hot-topic">
-                <div class = "hot-topic-content">
-                    <img src = "images/hot-topic-2.jpeg" alt = "" style="width:300x;height:161px;">
-                    <h2>Melanie Pindah Kos ke Dekat Kos PakDar</h2>
-                    <p>Siang bolong (27/2/23) Melanie Sayyidina Sabrina Refman dengan sumringah menyatakan bahwa ia mendapatkan kos baru di dekat kos Pak Dar dan sepertinya akan semakin sering menumpang...</p>
-                    <button>
-                        <a href = "#">Read More</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <hr> -->
-
-    <div class="container text-center" style="padding: 120px 80px 80px 80px;">
-        <div class="row align-items-center">
-          <div class="col">
-            <div id="carouselExampleIndicators" class="carousel slide">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class = "hot-topic">
-                        <div class = "hot-topic-content">
-                            <img src = "images/hot-topic-1.jpeg" alt = "" style="width:300x;height:161px;">
-                            <h2>Stress AJK, Tiga Remaja Bonding Sampai Tengah Malam</h2>
-                            <p>Setelah membahas penugasan 3 AJK lewat discord (27/2/23), tiga remaja ini diduga stress dan menumpahkan kestressan mereka dengan cara bonding dan deep talk via zoom...</p>
-                            <button>
-                                <a href = "#">Read More</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class = "hot-topic">
-                        <div class = "hot-topic-content">
-                            <img src = "images/hot-topic-2.jpeg" alt = "" style="width:300x;height:161px;">
-                            <h2>Melanie Pindah Kos ke Dekat Kos PakDar</h2>
-                            <p>Siang bolong (27/2/23) Melanie Sayyidina Sabrina Refman dengan sumringah menyatakan bahwa ia mendapatkan kos baru di dekat kos Pak Dar dan sepertinya akan semakin sering menumpang...</p>
-                            <button>
-                                <a href = "#">Read More</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="col">
-            <h2>Get today's Too<br>Much Information<br>From Kos PakDar</h2>
-            <button type="button" class="btn btn-danger" style="background: #d3d3d3; color:#000000; border-color: white;">Hottest now</button>
-            
-            </div>
-          
+        <div class="card-body">
+          <a href="#" class="card-link">Read more...</a>
         </div>
       </div>
-
-    <main>
-        <section class = "main-container-left">
-            <h2 id="Top">Top Stories</h2>
-            <div class = "container-top-left">
-                <article>
-                    <img src = "images/photo2.jpg" alt = "" style="width:300x;height:161px;">
-                    <div>
-                        <h3>Iri Dengki, Mahasiswi Blender HP</h3>
-
-                        <p>Seorang mahasiswi memblender ponselnya setelah melihat snapgram uwu dari Tsabita Putri Ramadhany yang berisikan konten prank pacar...</p>
-
-                        <a href = "#">Read More <span>>></span></a>
-                    </div>
-                </article>
-            </div>
-
-            <div class = "container-bottom-left">
-                <article>
-                    <img src = "images/photo.png">
-                    <div>
-                        <h3>Berapa Jam Iky Tidur Semalam?</h3>
-                        <p>Saat ditemui di kos Pak Dar malam ini (2/27/23) kantong mata Iky terpantau sangat hitam. "Mungkin 3 jam," jawab Iky saat ditanya soal lama tidurnya semalam...</p>
-
-                        <a href = "#">Read More <span>>></span></a>
-                    </div>
-                </article>
-
-                <article>
-                    <img src = "images/photo.png">
-                    <div>
-                        <h3>Banjir dan Akibatnya pada Knalpot Motor</h3>
-                        <p>Banjir di keputih lagi-lagi memakan korban. Fadilla, seorang mahasiswi kere, perlu merogoh kocek sebanyak 650 ribu rupiah untuk memperbaiki motornya...</p>
-                        <a href = "#">Read More <span>>></span></a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class = "main-container-right">
-            <h2 id="Latest">Latest Stories</h2>
-            
-            <article>
-                <h4>new</h4>
-                <div>
-                    <h2>Kacamata Agar Terlihat Lebih Pintar? Ini Kata Mbak Luna</h2>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
-
-                    <a href = "#">Read More <span>>></span></a>
-                </div>
-                <img src = "images/photo.png">
-            </article>
-
-            <article>
-                <h4>new</h4>
-                <div>
-                    <h2>Siang Baweng, Malam Nadira</h2>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
-
-                    <a href = "#">Read More <span>>></span></a>
-                </div>
-                <img src = "images/photo.png">
-            </article>
-
-            <article>
-                <h4>new</h4>
-                <div>
-                    <h2>Tips Saat Lelah Menjalani Hidup dari Salsabila Fatma Aripa, No. 4 Mencengangkan</h2>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
-
-                    <a href = "#">Read More <span>>></span></a>
-                </div>
-                <img src = "images/photo.png">
-            </article>
-
-            <article>
-                <h4>new</h4>
-                <div>
-                    <h2>Rule Telah Move On dari Hype Boy ke Ditto?</h2>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
-
-                    <a href = "#">Read More <span>>></span></a>
-                </div>
-                <img src = "images/photo.png">
-            </article>
-
-            <article>
-                <h4>new</h4>
-                <div>
-                    <h2>Ada Ulat di Bunga Pemberian Pacar, Yusna Meragukan Cinta Sang Kekasih</h2>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
-
-                    <a href = "#">Read More <span>>></span></a>
-                </div>
-                <img src = "images/photo.png">
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <div class = "footer-container">
-            <div class = "footer-left">
-                <section class="about">
-					<h2 id="Contact">About</h2>
-					<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.</p>
-					<div class="social-icons-footer">
-						<a href="https://www.facebook.com/kalyana.alkanza"><i class="fab fa-facebook"></i></a>
-						<a href="https://twitter.com/?lang=en-id"><i class="fab fa-twitter-square"></i></a>
-						<a href="mailto:kalyanaalkanza@gmail.com"><i class="fas fa-envelope"></i></a>
-						<a href="https://instagram.com/kalyanaalk/"><i class="fab fa-instagram"></i></a>
-						<a href="https://youtube.com/"><i class="fab fa-youtube-square"></i></a>
-						<a href="https://pinterest.com/"><i class="fab fa-pinterest-square"></i></a>
-						<a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
-					</div>
-				</section>    
-            </div>
-
-            <div class = "footer-center">
-                <section class="subscribe">
-					<h2>Subscribe Now</h2>
-					<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Etiam porta sem.</p>
-					<a href = "#">Get Plans</a>
-				</section>    
-            </div>
-
-            <div class = "footer-right">
-                <h2>Ask Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem!</p>
-
-                <div>
-                    
-                    <input type = "text" placeholder = "Tell us what you think">
-                </div>
-            </div>
+    </div>
+    <div class="col" style="padding: 0 0 40px 0;">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="images/hot2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">ChatGPT Lulus Ujian Sekolah Hukum AS</h5>
+          <p class="card-text">Kecerdasan buatan (artificial intelligence/AI) ChatGPT berhasil menyelesaikan pertanyaan ujian sarjana sekolah hukum di AS.
+            Jonathan Choi, profesor hukum dari Minnesota University Law...</p>
         </div>
+        <div class="card-body">
+          <a href="#" class="card-link">Read more...</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="padding: 0 0 40px 0;">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="images/hot3.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Teknologi Melindungi Data Pribadi</h5>
+          <p class="card-text">Presiden Joko Widodo telah mengesahkan Undang-Undang (UU) No. 27 Tahun 2022 tentang Perlindungan Data Pribadi (PDP) pada akhir tahun lalu. UU PDP mengatur jenis data pribadi...</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link">Read more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    </footer>
+<div class="search">
+  <div class="search2">
+    <div class="searchbar">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berita di sini..." title="Type in a name">
+    </div>
+    <div class="listofnews">
+      <ul id="myUL">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+        <li><a href="#"><h4>Rilis Kapal Baru, Tim Barunastra ITS Kembali Berlaga di Amerika Serikat</h4></a>
+        <!--Section: News of the day-->
+          <div class="row gx-5" style="margin-right: 20px;">
+            <div class="col-md-6 mb-4">
+              <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" style="text-align: center;" data-mdb-ripple-color="light">
+                <img src="images/news1.jpg" class="img-fluid" style="height: 200px;"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+            </div>
 
+            <div class="col-md-6 mb-4" style="text-align: left;"> 
+              <p class="text-muted">
+                Setelah sukses menjadi juara umum di ajang Internasional Roboboat Competition (IRC) 2022, di Amerika Serikat, tim Barunastra Institut Teknologi Sepuluh Nopember (ITS) kembali bersiap berlaga dalam kompetisi yang sama...
+              </p>
+              <button type="button" class="btn btn-primary" style="background-color: #867070; border-color: #867070;">Selanjutnya...</button>
+            </div>
+          </div>
+        </li>
+        
+        <li><a href="#"><h4>Inilah 4 Aplikasi Besutan Anak Muda Papua</h4></a>
+          <!--Section: News of the day-->
+            <div class="row gx-5" style="margin-right: 20px;">
+              <div class="col-md-6 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" style="text-align: center;" data-mdb-ripple-color="light">
+                  <img src="images/news2.jpg" class="img-fluid" style="height: 200px;"/>
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+              </div>
+  
+              <div class="col-md-6 mb-4" style="text-align: left;"> 
+                <p class="text-muted">
+                  Jayapura, BUMIPAPUA.COM- Para pemuda Papua yang tergabung dalam Papua Muda Inspiratif (PMI) binaan Badan Intelijen Negara (BIN) berhasil menciptakan empat aplikasi baru demi kemajuan Bumi Cenderawasih...
+                </p>
+                <button type="button" class="btn btn-primary" style="background-color: #867070; border-color: #867070;">Selanjutnya...</button>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#"><h4>Fenomena Ekuinoks Vernal Sambangi Indonesia Hari Ini, Apa Itu?</h4></a>
+            <!--Section: News of the day-->
+              <div class="row gx-5" style="margin-right: 20px;">
+                <div class="col-md-6 mb-4">
+                  <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" style="text-align: center;" data-mdb-ripple-color="light">
+                    <img src="images/news3.jpg" class="img-fluid" style="height: 200px;"/>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                  </div>
+                </div>
+    
+                <div class="col-md-6 mb-4" style="text-align: left;"> 
+                  <p class="text-muted">
+                    Fenomena Ekuinoks vernal jatuh pada hari ini, Selasa (21/3). Sebagian wilayah Indonesia akan mengalami kulminasi, atau hari tanpa bayangan. Momen ini berdekatan dengan Ramadhan, yang artinya durasi puasa hampir merata di seluruh bagian Bumi...
+                  </p>
+                  <button type="button" class="btn btn-primary" style="background-color: #867070; border-color: #867070;">Selanjutnya...</button>
+                </div>
+              </div>
+            </li>
+            
+        <li><a href="#"><h4>NASA Siap Kirim Manusia Keliling Bulan di 2024</h4></a>
+          <!--Section: News of the day-->
+            <div class="row gx-5" style="margin-right: 20px;">
+              <div class="col-md-6 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" style="text-align: center;" data-mdb-ripple-color="light">
+                  <img src="images/news4.jpg" class="img-fluid" style="height: 200px;"/>
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+              </div>
+  
+              <div class="col-md-6 mb-4" style="text-align: left;"> 
+                <p class="text-muted">
+                  Misi membawa manusia kembali ke Bulan sudah semakin dekat. Hal itu diungkap oleh NASA saat melaporkan analisis terkini dari misi Artemis I tanpa awak yang sukses dilakukan...
+                </p>
+                <button type="button" class="btn btn-primary" style="background-color: #867070; border-color: #867070;">Selanjutnya...</button>
+              </div>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center text-lg-start" style="background-color: #867070; z-index: 999;">
+  <div class="text-center p-3" style="color: #f5ebeb;">
+    © 2023 Copyright:
+    <a class="text-dark" href="">TMIToday.com</a>
+  </div>
+</footer>
+  
 </body>
+
+<script src="js/navbar.js"></script>
+<script src="js/search.js"></script>
+<script src="js/categories.js"></script>
+
 </html>

@@ -1,518 +1,318 @@
 *{
-        box-sizing: border-box;
-        padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Navbar section */
+
+.nav{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: #867070;
+    z-index: 999999;
+}
+
+.nav div.logo{
+    width: 180px;
+    height: 10px;
+    position: absolute;
+}
+
+.nav div.logo a{
+    text-decoration: none;
+    color: #f5ebeb;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.nav div.logo a:hover {
+    color: #d5b4b4;
+}
+
+.nav div.main_list{
+    width: 600px;
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul{
+    width:100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav div.main_list ul li, .dropbtn{
+    width: 120px;
+    height: 65px;
+    background-color: #867070;
+    border: none;
+}
+
+.nav div.main_list ul li a, .dropbtn {
+    text-decoration: none;
+    color: #f5ebeb;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.nav div.main_list ul li:hover, .dropbtn:hover{
+    background-color: #d5b4b4;
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #f5ebeb;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #d5b4b4;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #d5b4b4;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #d5b4b4;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -20deg);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .container{
         margin: 0;
     }
-
-    :root{
-        --heading: 'Montserrat', sans-serif;
-    }
-
-    body{
-        font-family: 'Raleway', sans-serif;
-        background: #fff;
-    }
-
-    img{
-        width: 100%;
-    }
-    ul{
-        list-style: none;
-    }
-
-    a{
-        text-decoration: none;
-        color: #000;
-    }
-
-    hr{
-        width: 95vw;
-        margin: 0 auto;
-    }
-
-    .top-head{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        background: #252525;
-        color: #fff;
-        padding: 20px 20px;
-    }
-
-    .top-head .fas{
-        font-size: 2rem;
-        cursor: pointer;
-    }
-
-    .times-btn{
-        display: none;
-    }
-
-    .nav-bar{
-        background: #333;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .social-icons{
-        display: none;
-    }
-
-    .banner{
-        min-height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        padding: 80px 40px 20px 40px;
-        margin-top: 8px;
-        background: #d2d2d2;
-    }
-
-    .banner-main-content{
-        padding: 0 2rem;
-        line-height: 1.7;
-    }
-
-    .banner-main-content h2{
-        font-size: 2rem;
-        font-family: var(--heading);
-    }
-
-    .banner-main-content h3{
-        padding: 1rem 0;
-    }
-
-    button{
-        border: none;
-        background: #252525;
-        font-size: 1.2rem;
-        font-family: 'Montserrat', sans-serif;
-        transition: background 1s ease;
-    }
-
-    button a{
-        color: #f3f3f3f3;
-        transition: color 1s ease;
-    }
-
-    button:hover{
-        background: #fff;
-    }
-
-    button:hover a{
-        color: #0d0a0b;
-    }
-
-
-    .current-news-head{
-        background: #fff;
-        padding: 20px;
-        font-size: 12px;
-        margin: 20px 0;
-    }
-
-    .current-news-head h3{
-        padding: 6px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .current-news-head h3:hover::before{
-        content: ">> ";
-        position: absolute;
-        left: -12px;
-    }
-
-    .current-news-head span{
-        display: block;
-        font-family: var(--heading);
-        font-weight: 300;
-        text-transform: uppercase;
-    }
-
-    .hot-topic{
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        padding: 12px;
-        height: 431px;
-        
-    }
-
-    .hot-topic img{
-        display: block;
-        padding-top: 20px;
-    }
-
-    .hot-topic-content{
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        line-height: 1.3;
-        color: #f3f3f3;
-        margin: 20px;
-        background: #252525;
-    }
-
-    .hot-topic h2{
-        padding: 12px 10px;
-        font-size: 18px;
-        text-shadow: 0 0 2px #000;
-    }
-
-    .hot-topic p{
-        padding: 10px 0;
-        font-size: 15px;
-        text-shadow: 0 0 2px #000;
-        padding: 12px 10px;
-    }
-
-    .hot-topic-content a{
-        display: block;
-        width: 95px;
-        text-align: center;
-        font-size: 14px;
-        margin: 5px 5px 5px 5px;
-    }
-
-    .hot-topic-content a:hover{
-        text-decoration: underline;
-    }
-
-    main a,
-    .subscribe a{
-        padding: 15px 0;
-        display: block;
-        transition: all 0.5s;
-    }
-
-    main a,
-    .subscribe a{
-        transition: padding-left 0.5s;
-    }
-
-    main a:hover span{
-        padding-left: 5px;
-    }
-
-    main a:hover{
-        color: #413588;
-    }
-
     
-    .subscribe a:hover{
-        color: #afafaf;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    
+    .container{
+        margin: 0;
     }
-
-    /* main container left */
-
-    .main-container-left{
-        padding: 30px 10px;
-        width: 500px;
+    
+    .nav div.logo{
+        margin-left: 15px;
     }
-
-    .main-container-left > h2{
-        padding: 15px 0 15px 30px;
-    }
-
-    .main-container-left h3{
-        padding: 10px 0;
-        font-size: 18px;
-        font-family: var(--heading);
-    }
-
-    .main-container-left p{
-        font-size: 15px;
-        font-weight: 300;
-    }
-
-    .main-container-left article{
-        padding: 10px;
-    }
-
-    .container-top-left{
-        background: #f3f3f3;
-        margin: 15px 30px;
-        padding: 15px 30px;
-    }
-
-    .container-bottom-left{
-        background: #f3f3f3;
-        margin: 15px 30px;
-        padding: 15px 30px;
-    }
-
-    /*** main container right */
-
-    .main-container-right{
-        padding: 30px 10px;
-        width: 800px;
-    }
-
-    .main-container-right > h2{
-        padding: 15px 0 15px 30px;
-    }
-
-    .main-container-right article{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        padding: 15px 0;
-        border-bottom: 1px solid #413588;
-    }
-
-    .main-container-right article:last-child{
-        border-bottom: none;
-    }
-
-    .main-container-right img{
-        width: 100px;
-        height: 100px;
-        align-self: center;
-    }
-
-    .main-container-right h4{
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 12px;
-        align-self: center;
-        color: #413588;
-    }
-
-    .main-container-right article h2{
-        font-size: 18px;
-        padding: 10px 0;
-        font-family: var(--heading);
-    }
-
-    .main-container-right article p{
-        font-size: 15px;
-        font-weight: 300;
-    }
-
-    .main-container-right article div{
-        margin-right: 10px;
-    }
-
-
-    /****** footer *****/
-
-    footer{
-        background: #252525;
-        color: #f3f3f3;
-        padding: 30px;
-    }
-
-    footer h2{
-        padding: 10px 0;
-    }
-
-    footer p{
-        padding: 10px 0;
-        line-height: 1.3;
-    }
-
-    .footer-left, 
-    .footer-center,
-    .footer-right{
-        margin: 0 20px;
-        width: 33%;
-    }
-
-    footer > p{
-        text-align: center;
-        opacity: 0.8;
-        margin-top: 20px;
-    }
-
-    .footer-right i{
-        font-size: 1.8rem;
-        color: #808080;
-    }
-
-    .footer-right input{
-        font-size: 18px;
-        border: none;
-        background: transparent;
-        outline: none;
-        color: #808080;
-        padding-right: 10px;
+    
+    .nav div.main_list{
         width: 100%;
+        margin-top: 65px;
+        height: 0px;
+        overflow: hidden;
     }
-
-    .footer-right div{
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        width: 200px;
-        padding: 10px 0;
-        border-bottom: 1.6px solid #808080;
+    
+    .nav div.show_list{
+        height: 200px;
     }
-
-    .subscribe a{
-        border: #000;
-        border-width: 2px;
-        padding: 5px;
+    
+    .nav div.main_list ul{
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        top: 80px;
+        right: 0;
+        left: 0;
     }
-
-
-
-    @media(max-width: 460px){
-        .hot-topic-content h2{
-            font-size: 16px;
-        }
-
-        .main-container-right article{
-            display: block;
-        }
-
-        .main-container-right article img{
-            display: none;
-        }
-
-
+    
+    .nav div.main_list ul li{
+        width: 100%;
+        height: 40px;
+        background-color: #867070;
+    } 
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
     }
-
-    @media(max-width: 500px){
-        .main-container-right article{
-            grid-template-columns: 1fr 3fr;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        .main-container-right article h4{
-            grid-row: 1/2;
-            grid-column: 1/2;
-            align-self: flex-start;
-        }
-
-        .main-container-right article img{
-            grid-row: 2/3;
-            grid-column: 1/2;
-        }
-
-        .main-container-right article div{
-            grid-row: 1/3;
-            grid-column: 2/3;
-        }
+    
+    .nav div.media_button{
+        display: block;
     }
+}
 
+/* for search bar */
 
-    @media(min-width: 768px){
-        .banner-sub-content{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .container-bottom-left{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
+.search {
+    width: 100%;
+    background-color: #d5b4b4;
+    /* margin: 0 auto; */
+  }
+  
+  .search2 {
+    background-color: #f5ebeb;
+    /* padding: 10px; */
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  .searchbar input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #d5b4b4;
+    font-size: 16px;
+    color: #f5ebeb;
+    outline: none;
+  }
+  
+  .listofnews {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .listofnews li {
+    border-bottom: 1px solid #867070;
+  }
+  
+  .listofnews li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #867070;
+  }
+  
+  .listofnews li:hover {
+    background-color: #e4d0d0;
+  }
+  
+  /* Styles for larger screens */
+  @media screen and (min-width: 768px) {
+    .search {
+      /* display: flex; */
+      display: flex;
+      justify-content: center;
     }
-
-
-    @media(min-width: 800px){
-        /* nav */
-        .ham-btn, .times-btn{
-            display: none!important;
-        }
-
-        .navigation-container{
-            display: flex;
-            background: #252525;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .top-head{
-            flex: 0 0 15%;
-        }
-
-        .nav-bar{
-            flex: 1 0 auto;
-            height: 100%;
-            background: transparent;
-        }
-
-        .nav-bar nav ul{
-            display: flex;
-            justify-content: center;
-        }
-        .nav-bar nav ul li{
-            padding-right: 30px;
-        }
-
-        .nav-bar nav ul li:hover{
-            background: none;
-        }
-
-        /* social icons */
-        .social-icons{
-            flex: 0 1 30%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .social-icons .fab{
-            color: #fff;
-            font-size: 2rem;
-        }
-        .social-icons ul{
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        .social-icons ul li{
-            padding: 20px;
-        }
-
-        .footer-container{
-            display: flex;
-        }
-
-        .footer-right,
-        .footer-left{
-            flex: 1;
-        }
+    
+    .search2 {
+      width: 80%;
+      padding: 20px;
     }
-
-    @media(min-width: 992px){
-        main{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+    
+    .searchbar input[type="text"] {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0;
     }
-
-    @media(min-width: 1080px){
-        .banner{
-            grid-template-columns: 1fr 2fr;
-        }
+    
+    .listofnews {
+      width: 100%;
     }
+  }
 
-    .banner-main-content:after{
-        content: "";
-        animation: slide 10s ease infinite;
-    }
-
-    /* Dropdown Button */
-.dropbtn {
-    background-color: #9f9f9f;
-    border-radius: 8px;
-    color: rgb(0, 0, 0);
-    padding: 7px;
+  /* Dropdown Button */
+/* .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
-  }
+  } */
   
   /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #616161;
+  /* .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  } */
+  
+  /* The search field */
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 8px 8px 8px 8px;
+    border: none;
+    border-bottom: 1px solid #e4d0d0;
   }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {outline: 3px solid #f5ebeb;}
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
@@ -524,22 +324,25 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #d5b4b4;
+    min-width: 120px;
+    border: 1px solid #e4d0d0;
     z-index: 1;
+    /* margin-bottom: 10px; */
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    /* color: #867070; */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {
+    background-color: #867070
+}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
